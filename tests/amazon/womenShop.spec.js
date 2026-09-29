@@ -4,7 +4,7 @@ test.use({
     storageState: 'playwright/.auth/amazon.json'
 });
 
-test.only('Amazon account page', async ({ page }) => {
+test('Amazon account page', async ({ page }) => {
 
     await page.goto('https://www.amazon.com/');
     await page.locator('.hm-icon').click();
