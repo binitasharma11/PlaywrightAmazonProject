@@ -1,0 +1,27 @@
+const { test, expect } = require('@playwright/test');
+
+test.use({
+    storageState: 'playwright/.auth/amazon.json'
+});
+
+test.only('Amazon account page', async ({ page }) => {
+
+    await page.goto('https://www.amazon.com/');
+    await page.locator('.hm-icon').click();
+    await page.getByText("Clothing, Shoes, Jewelry & Watches").first().click();
+    await page.getByRole('link', { name: 'Women', exact: true }).nth(1).click(); //This works with chrome and firefox but not with webkit. So remove .nth(1) to make it work with webkit.
+    await page.getByRole('link', { name: 'Dresses', exact: true }).click();
+    await page.getByRole('link').filter({ hasText: "Cinq a Sept Women's Crepe Khloe Blazer" }).click();
+    await page.locator("#add-to-cart-button").click();
+    await page.locator(".nav-cart-icon").click();
+    await page.locator("input[value='Proceed to checkout']").click();
+
+    //console.log(await page.title());
+    //await page.pause();
+
+    //await expect(page).toHaveTitle(/Amazon/i);
+
+    // Your test starts here.
+    // No username/password/OTP required.
+
+});
