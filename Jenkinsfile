@@ -34,7 +34,7 @@ pipeline {
             steps {
                 withCredentials([
                     file(
-                        credentialsId: 'amazon-playwright-auth',
+                        credentialsId: 'amazon-playwright-authFile',
                         variable: 'AUTH_FILE'
                     )
                 ]) {
