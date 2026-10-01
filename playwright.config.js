@@ -15,6 +15,11 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   //timeout: 40 * 1000,
+  /* Run the files that match these file types as tests. */
+  testMatch: [
+    '**/*.spec.js',
+    //'**/*.manual.js'
+  ],
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
