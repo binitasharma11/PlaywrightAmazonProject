@@ -52,7 +52,7 @@ pipeline {
                     dir /s /b tests\\*.spec.js
 
                     echo ===== PLAYWRIGHT TEST LIST =====
-                    npx playwright test tests/amazon --config=playwright.config.spec.js --list
+                    npx playwright test tests/amazon --config=playwright.config.js --list
                 '''
             }
         }
