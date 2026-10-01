@@ -45,7 +45,17 @@ pipeline {
                 }
             }
         }
+        stage('Verify Test Selection') {
+            steps {
+                bat '''
+                    echo ===== ALL TEST FILES =====
+                    dir /s /b tests\\*.spec.js
 
+                    echo ===== PLAYWRIGHT TEST LIST =====
+                    npx playwright test tests/amazon --config=playwright.config.spec.js --list
+                '''
+            }
+        }
         stage('Run Tests') {
             steps {
                 bat 'npx playwright test tests/amazon'
