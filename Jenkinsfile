@@ -48,7 +48,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'npx playwright test/amazon'
+                bat 'npx playwright test tests/amazon'
             }
         }
     }
