@@ -18,6 +18,7 @@ export default defineConfig({
   /* Run the files that match these file types as tests. */
   testMatch: [
     '**/*.spec.js',
+    /* Un-comment this to run manual tests and to authenticate via amazonAuthSetup.manual.js*/
     //'**/*.manual.js'
   ],
   /* Run tests in files in parallel */
