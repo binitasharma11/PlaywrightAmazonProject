@@ -1,0 +1,6 @@
+/*- Verify product title, price, and availability.
+- Select an available size or color.
+- Verify product images and options.
+- Add an available item to the cart.
+- Validate unavailable or out-of-stock variants where practical.
+Playwright: getByRole(), getByText(), selectOption(), assertions */

@@ -1,9 +1,9 @@
 const { test, expect } = require('@playwright/test');
 
-const {headerNavigation} = require('../Pages/headerNavigation');
-const {sideNavigation} = require('../Pages/sideNavigation');
-const {cartPage} = require('../Pages/cartPage');
-const {productDetailsPage} = require('../Pages/productDetailsPage');
+const {headerNavigation} = require('../../Pages/headerNavigation');
+const {sideNavigation} = require('../../Pages/sideNavigation');
+const {cartPage} = require('../../Pages/cartPage');
+const {productDetailsPage} = require('../../Pages/productDetailsPage');
 
 test.use({
     storageState: 'playwright/.auth/amazon.json'
